@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import {MuiThemeProvider} from "@material-ui/core/styles";
+import {connect} from "react-redux";
+import {fetchNotes} from "../actions";
 
 import theme from "../styles/theme";
 import NavBar from "./Navigation/NavBar";
@@ -16,4 +18,9 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = ({notes}) => ({notes});
+
+export default connect(
+  mapStateToProps,
+  {fetchNotes}
+)(App);
