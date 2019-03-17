@@ -12,7 +12,7 @@ const initialState = {notes: []};
 const notesReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_NOTES_SUCCESS:
-      return {...state};
+      return {...state, notes: notes};
 
     case CREATE_NOTE_SUCCESS:
       return {...state, notes: [...state.notes, action.payload]};

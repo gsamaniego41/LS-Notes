@@ -1,12 +1,11 @@
 import React from "react";
-import {notes} from "../../../dummy-data";
 import Card from "./Card";
 
-const CardList = () => {
+const CardList = props => {
   return (
     <div>
-      {notes.map(note => {
-        return <Card note={note} />;
+      {props.notes.map(note => {
+        return <Card key={note.id} note={note} />;
       })}
     </div>
   );
