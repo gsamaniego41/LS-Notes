@@ -6,7 +6,7 @@ const CardList = () => {
   return (
     <div>
       {notes.map(note => {
-        return <Card />;
+        return <Card note={note} />;
       })}
     </div>
   );
