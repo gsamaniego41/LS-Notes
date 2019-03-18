@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import Card from "./Card";
 
 const CardList = props => {
@@ -9,6 +11,16 @@ const CardList = props => {
       })}
     </div>
   );
+};
+
+CardList.propTypes = {
+  notes: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      body: PropTypes.string
+    })
+  )
 };
 
 export default CardList;
