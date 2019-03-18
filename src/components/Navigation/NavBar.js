@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {withStyles} from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -22,6 +22,7 @@ const styles = {
 
 const NavBar = props => {
   const {classes} = props;
+  const [login, setLogin] = useState(false);
 
   return (
     <div className={classes.root}>
@@ -37,7 +38,9 @@ const NavBar = props => {
           <Typography variant="h6" color="inherit" className={classes.grow}>
             Lambda Notes
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" onClick={() => setLogin(!login)}>
+            Login
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
