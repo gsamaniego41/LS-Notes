@@ -6,7 +6,7 @@ import {fetchNotes} from "../actions";
 
 import theme from "../styles/theme";
 import NavBar from "./Navigation/NavBar";
-import CardList from "./View/Cards/CardList";
+import NoteCardList from "./View/Cards/NoteCardList";
 import AddButton from "./View/Buttons/AddButton";
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <NavBar />
-        <CardList notes={this.props.notes} />
+        <NoteCardList notes={this.props.notes} />
         <AddButton />
       </MuiThemeProvider>
     );

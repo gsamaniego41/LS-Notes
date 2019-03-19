@@ -10,25 +10,25 @@ const idUp = idCounter();
 export const notes = [
   {
     id: idUp(),
-    title: "Note 1",
+    title: "Functional Components I",
     body:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem repudiandae ad aut assumenda ab? Odit quisquam nulla magnam quos maiores."
   },
   {
     id: idUp(),
-    title: "Note 2",
+    title: "Functional Components II",
     body:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem repudiandae ad aut assumenda ab? Odit quisquam nulla magnam quos maiores."
   },
   {
     id: idUp(),
-    title: "Note 3",
+    title: "Class Components I",
     body:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem repudiandae ad aut assumenda ab? Odit quisquam nulla magnam quos maiores."
   },
   {
     id: idUp(),
-    title: "Note 4",
+    title: "Class Components II",
     body:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem repudiandae ad aut assumenda ab? Odit quisquam nulla magnam quos maiores."
   }
