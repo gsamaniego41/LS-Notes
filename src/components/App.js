@@ -3,11 +3,13 @@ import {MuiThemeProvider} from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {fetchNotes} from "../actions";
+import {Grid} from "@material-ui/core";
 
 import theme from "../styles/theme";
 import NavBar from "./Navigation/NavBar";
 import NoteCardList from "./View/Cards/NoteCardList";
 import AddButton from "./View/Buttons/AddButton";
+import Menu from "./Menu/Menu";
 
 class App extends Component {
   componentDidMount = () => {
@@ -18,7 +20,14 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <NavBar />
-        <NoteCardList notes={this.props.notes} />
+        <Grid container>
+          <Grid item>
+            <Menu />
+          </Grid>
+          <Grid item>
+            <NoteCardList notes={this.props.notes} />
+          </Grid>
+        </Grid>
         <AddButton />
       </MuiThemeProvider>
     );
